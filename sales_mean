@@ -1,0 +1,283 @@
+#매출액
+
+install.packages("ggplot2")
+library("dplyr")
+library("ggplot2")
+getwd()
+
+
+
+#상권별_월별 매출 평균
+####1701 매출 평균####
+store_sales <- read.csv("1701매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+head(store_sales_1)
+head(store_sales_2)
+#상권코드명 별로 매출평균 조인 
+store_sales_1701 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+View(store_sales_1701)
+#순서 재지정
+store_sales_1701 <- store_sales_1701[c(3,1,2)]
+#중복 값 제거 
+store_sales_1701 <- unique(store_sales_1701)
+View(store_sales_1701)
+
+####1702 매출 평균####
+store_sales <- read.csv("1702매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+head(store_sales_1)
+head(store_sales_2)
+#상권코드명 별로 매출평균 조인 
+store_sales_1702 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+View(store_sales_1702)
+#순서 재지정
+store_sales_1702 <- store_sales_1702[c(3,1,2)]
+#중복 값 제거 
+store_sales_1702 <- unique(store_sales_1702)
+View(store_sales_1702)
+
+####1703 매출 평균####
+store_sales <- read.csv("1703매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1703 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1703 <- store_sales_1703[c(3,1,2)]
+#중복 값 제거 
+store_sales_1703 <- unique(store_sales_1703)
+View(store_sales_1703)
+
+####1704 매출 평균####
+store_sales <- read.csv("1704매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1704 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1704 <- store_sales_1704[c(3,1,2)]
+#중복 값 제거 
+store_sales_1704 <- unique(store_sales_1704)
+View(store_sales_1704)
+
+
+####1705 매출 평균####
+store_sales <- read.csv("1705매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1705 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1705 <- store_sales_1705[c(3,1,2)]
+#중복 값 제거 
+store_sales_1705 <- unique(store_sales_1705)
+View(store_sales_1705)
+
+####1706 매출 평균####
+store_sales <- read.csv("1706매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1706 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1706 <- store_sales_1706[c(3,1,2)]
+#중복 값 제거 
+store_sales_1706 <- unique(store_sales_1706)
+View(store_sales_1706)
+
+####1705 매출 평균####
+store_sales <- read.csv("1707매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1707 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1707 <- store_sales_1707[c(3,1,2)]
+#중복 값 제거 
+store_sales_1707 <- unique(store_sales_1707)
+View(store_sales_1707)
+
+####1705 매출 평균####
+store_sales <- read.csv("1708매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1708 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1708 <- store_sales_1708[c(3,1,2)]
+#중복 값 제거 
+store_sales_1708 <- unique(store_sales_1708)
+View(store_sales_1708)
+
+####1705 매출 평균####
+store_sales <- read.csv("1709매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1709 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1709 <- store_sales_1709[c(3,1,2)]
+#중복 값 제거 
+store_sales_1709 <- unique(store_sales_1709)
+View(store_sales_1709)
+
+####1710 매출 평균####
+store_sales <- read.csv("1710매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1710 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1710 <- store_sales_1710[c(3,1,2)]
+#중복 값 제거 
+store_sales_1710 <- unique(store_sales_1710)
+View(store_sales_1710)
+
+####1711 매출 평균####
+store_sales <- read.csv("1711매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1711 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1711 <- store_sales_1711[c(3,1,2)]
+#중복 값 제거 
+store_sales_1711 <- unique(store_sales_1711)
+View(store_sales_1711)
+
+####1712 매출 평균####
+store_sales <- read.csv("1712매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1712 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1712 <- store_sales_1712[c(3,1,2)]
+#중복 값 제거 
+store_sales_1712 <- unique(store_sales_1712)
+View(store_sales_1712)
+
+####1801 매출 평균####
+store_sales <- read.csv("1801매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1801 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1801 <- store_sales_1801[c(3,1,2)]
+#중복 값 제거 
+store_sales_1801 <- unique(store_sales_1801)
+View(store_sales_1801)
+
+####1802 매출 평균####
+store_sales <- read.csv("1802매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+head(store_sales_1)
+head(store_sales_2)
+#상권코드명 별로 매출평균 조인 
+store_sales_1802 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+View(store_sales_1802)
+#순서 재지정
+store_sales_1802 <- store_sales_1802[c(3,1,2)]
+#중복 값 제거 
+store_sales_1802 <- unique(store_sales_1802)
+View(store_sales_1802)
+
+####1803 매출 평균####
+store_sales <- read.csv("1803매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1803 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1803 <- store_sales_1803[c(3,1,2)]
+#중복 값 제거 
+store_sales_1803 <- unique(store_sales_1803)
+View(store_sales_1803)
+
+####1804 매출 평균####
+store_sales <- read.csv("1804매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1804 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1804 <- store_sales_1804[c(3,1,2)]
+#중복 값 제거 
+store_sales_1804 <- unique(store_sales_1804)
+View(store_sales_1804)
+
+
+####1805 매출 평균####
+store_sales <- read.csv("1805매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1805 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1805 <- store_sales_1805[c(3,1,2)]
+#중복 값 제거 
+store_sales_1805 <- unique(store_sales_1805)
+View(store_sales_1805)
+
+####1806 매출 평균####
+store_sales <- read.csv("1806매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1806 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1806 <- store_sales_1806[c(3,1,2)]
+#중복 값 제거 
+store_sales_1806 <- unique(store_sales_1806)
+View(store_sales_1806)
+
+####1807 매출 평균####
+store_sales <- read.csv("1807매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1807 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1807 <- store_sales_1807[c(3,1,2)]
+#중복 값 제거 
+store_sales_1807 <- unique(store_sales_1807)
+View(store_sales_1807)
+
+####1808 매출 평균####
+store_sales <- read.csv("1808매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1808 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1808 <- store_sales_1808[c(3,1,2)]
+#중복 값 제거 
+store_sales_1808 <- unique(store_sales_1808)
+View(store_sales_1808)
+
+####1809 매출 평균####
+store_sales <- read.csv("1809매출.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+store_sales_1 <- store_sales %>% group_by(상권_코드_명) %>% summarise(매출평균 = mean(당월_매출_금액))
+store_sales_2 <- store_sales %>% select(기준_년월_코드, 상권_코드_명)
+#상권코드명 별로 매출평균 조인 
+store_sales_1809 <- left_join(store_sales_1, store_sales_2, by = "상권_코드_명")                                        
+#순서 재지정
+store_sales_1809 <- store_sales_1809[c(3,1,2)]
+#중복 값 제거 
+store_sales_1809 <- unique(store_sales_1809)
+View(store_sales_1809)
+
+
+store_sales_all <- bind_rows(store_sales_1701 , store_sales_1702, store_sales_1703,store_sales_1704,store_sales_1705,
+                             store_sales_1706, store_sales_1707,store_sales_1708, store_sales_1709, store_sales_1710,
+                             store_sales_1711, store_sales_1712, store_sales_1801, store_sales_1802, store_sales_1803,
+                             store_sales_1804, store_sales_1805, store_sales_1806, store_sales_1807, store_sales_1808,
+                             store_sales_1809)
+
+
+str(store_sales_all)
+View(store_sales_all)
