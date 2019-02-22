@@ -1,0 +1,20 @@
+store_sales_all <- read.csv("store_sales_all.csv", header = TRUE, stringsAsFactors = FALSE, na.strings = "")
+
+#월별 함수(년월에 집어넣기)
+function.store_sales_y <- function(month){
+  store_sales_y <- store_sales_all %>% filter(기준_년월_코드 == month)
+  print(arrange(store_sales,desc(as.numeric(매출평균))))
+  
+}
+#(원하는기준_년월_코드)
+function.store_sales_y(201802)
+
+#상권 코드명 함수(상권 코드명에 집어넣기)
+function.store_sales_n <- function(name){
+  store_sales_n <- store_sales_all %>% filter(상권_코드_명 == name)
+  print(arrange(store_sales_n,desc(as.numeric(매출평균))))
+  
+}
+
+#(원하는상권_코드_명)
+function.store_sales_n("가락로16길")
